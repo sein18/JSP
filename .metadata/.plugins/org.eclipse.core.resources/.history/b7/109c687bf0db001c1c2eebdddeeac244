@@ -1,0 +1,23 @@
+package com.my.dao;
+
+import java.sql.Connection;
+import java.util.List;
+
+public class MyBoardDao {
+	Connection con = null;
+	
+	public MyBoardDao() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("01. driver 연결");
+		} catch (ClassNotFoundException e) { 
+			System.out.println("01. driver 연결 실패");
+			e.printStackTrace();
+		}
+	}
+
+	//전체 출력
+	public List<MyBoardDao> selectAll(){
+		return null;
+	}
+}
