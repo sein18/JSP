@@ -67,7 +67,7 @@
 
 
 
-*  __JSP 내장 객체 영역__
+* __JSP 내장 객체 영역__
 
   |  __영역__   |                  __설명__                  |
   | :---------: | :----------------------------------------: |
@@ -77,3 +77,43 @@
   | application |    하나의 웹 애플리케이션과 관련된 영역    |
 
   application > session > request > page
+
+---
+
+* __jsp기본 설정__
+
+```js
+<% request.setCharacterEncoding("UTF-8"); %>
+<% response.setContentType("text/html; charset=UTF-8"); %> 
+    
+    ~~~
+```
+
+---
+
+
+
+* __Request 주요 메소드__
+
+  |      __메소드 명__       |                         __설정__                          |
+  | :----------------------: | :-------------------------------------------------------: |
+  |    getParameter(name)    |                  name 파라미터의 값 리턴                  |
+  | getParameterValues(name) |    name 파라미터의 값을 배열 형태로 리턴(checkbox 등)     |
+  |   getParameterNames()    |             요청에 포함된 파라미터 이름 리턴              |
+  |       getMethod()        |                    현재 요청 방식 리턴                    |
+  |       getSession()       |                    현재 세션 객체 리턴                    |
+  |  setCharacterEncoding()  | 클라이언트에서 서버로 전달된 값을 지정한 문자 셋으로 변경 |
+
+  
+
+* __ Response 주요 메소드__
+
+  |       __메소드 명__        |                      __설명__                      |
+  | :------------------------: | :------------------------------------------------: |
+  |     sendRedirect(url)      |   응답 결과를 요청으로 하여 지정된 url에 재전송    |
+  | setStatus(int status_code) |  응답으로 전송될 상태 코드 설정, 성공은 200 / OK   |
+  | sendError(int status_code) |   에러가 발생한 경우 응답 헤더에 상태 코드 설정    |
+  |   setContentType(String)   | 서버에서 클라이언트로 전달될 값의 데이터 타입 설정 |
+
+---
+

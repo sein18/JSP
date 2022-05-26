@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/Users/tpdls/OneDrive/\uBC14\uD0D5 \uD654\uBA74/eclipse/
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Users/tpdls/OneDrive/\uBC14\uD0D5 \uD654\uBA74/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/lib/jrt-fs.jar
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Users/tpdls/OneDrive/\uBC14\uD0D5 \uD654\uBA74/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/lib/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Program Files/Amazon Corretto/jdk11.0.14_10/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Program Files/Amazon Corretto/jdk11.0.14_10/lib/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
 org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/Users/tpdls/OneDrive/\uBC14\uD0D5 \uD654\uBA74/eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar
 org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/tpdls/.m2/repository
