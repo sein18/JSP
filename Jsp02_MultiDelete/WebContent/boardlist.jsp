@@ -18,6 +18,7 @@
 	tr,td,th{
 		text-align: center;
 	}
+	
 </style>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
@@ -48,6 +49,8 @@
 	MDBoardDao dao = new MDBoardDao();
 	List<MDBoardDto> list =dao.selectAll();
 %>
+
+<%@ include file="./form/header.jsp" %>
 
 <h1>글 목록</h1>
 <form id="muldelform" action="muldel.jsp" method="post">
@@ -85,10 +88,12 @@
 			<tr>
 				<td colspan="5">
 					<input type="submit" value="삭제">
-					<input type="button" value="글쓰기">
+					<input type="button" value="글쓰기" onclick="location.href ='boardwrite.jsp'">
 				</td>
 			</tr>	
 		</table>
 	</form>
+	
+<%@ include file="./form/footer.jsp" %>
 </body>
 </html>

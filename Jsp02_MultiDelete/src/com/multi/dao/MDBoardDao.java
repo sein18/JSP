@@ -82,16 +82,82 @@ public class MDBoardDao {
 	}
 	//글작성
 	public int insert(MDBoardDto dto) {
-		return 0;
+		Connection con = getConnection();
+		PreparedStatement pstm = null;
+		String sql = " INSERT INTO MDBOARD VALUES(NULL,?,?,?,NOW()) ";
+		int res = 0;
+		
+		try {
+			pstm = con.prepareStatement(sql);
+			pstm.setString(1, dto.getWriter());
+			pstm.setString(2, dto.getTitle());
+			pstm.setString(3, dto.getContent());
+			
+			res = pstm.executeUpdate();
+			if(res>0) {
+				commit(con);
+			}
+			else {
+				rollback(con);
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		} finally {
+			close(con,pstm);
+		}
+		return res;
 		
 	}
 	//글수정
 	public int update(MDBoardDto dto) {
-		return 0;
+		Connection con = getConnection();
+		PreparedStatement pstm = null;
+		String sql = " UPDATE MDBOARD SET TITLE=?, CONTENT=? WHERE SEQ=? ";
+		int res = 0;
+		
+		try {
+			pstm = con.prepareStatement(sql);
+			pstm.setInt(3, dto.getSeq());
+			pstm.setString(1, dto.getTitle());
+			pstm.setString(2, dto.getContent());
+			res = pstm.executeUpdate();
+			
+			if(res>0) {
+				commit(con);
+			}else {
+				rollback(con);
+			}
+		} catch (SQLException e) { 
+			e.printStackTrace();
+		}finally {
+			close(con,pstm);
+		} 
+		return res;
 	}
 	//글삭제
 	public int delete(int seq) {
-		return 0;
+		Connection con = getConnection();
+		PreparedStatement pstm = null;
+		int res = 0;
+		String sql = " DELETE FROM MDBOARD WHERE SEQ=? ";
+		
+		try {
+			pstm = con.prepareStatement(sql);
+			pstm.setInt(1, seq);
+			
+			res = pstm.executeUpdate();
+			if(res>0) {
+				commit(con);
+			}else {
+				rollback(con);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(con,pstm);
+		}
+		return res;
 	}
 
 	// 다중삭제

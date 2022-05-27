@@ -19,6 +19,9 @@
 	MDBoardDao dao =new MDBoardDao();
 	MDBoardDto dto = dao.selectOne(seq);
 %>
+
+<%@ include file="./form/header.jsp" %>
+
 <div id="detailform">
 	<h1>게시글 보기</h1>
 	<table border="1">
@@ -44,12 +47,15 @@
 		</tr>
 		<tr>
 			<td colspan="2">
-				<input type="button" value="수정">
-				<input type="button" value="삭제">
-				<input type="button" value="목록" onclick="location.href='boradlist.jsp'">
+				<input type="button" value="수정" onclick="location.href='boardupdate.jsp?seq=<%=dto.getSeq()%>'">
+				<input type="button" value="삭제" onclick="location.href='boarddelete.jsp?seq=<%=dto.getSeq()%>'">
+				<input type="button" value="목록" onclick="location.href='boardlist.jsp'">
 			</td>
 		</tr>
 	</table>
 </div>
+
+<%@ include file="./form/footer.jsp" %>
+
 </body>
 </html>
