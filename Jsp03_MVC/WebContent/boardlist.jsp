@@ -32,6 +32,12 @@
             return false;
          }
       });
+      $("input[name=chk]").click(function(){
+ 		 console.log($("input[name=chk]:checked").length);
+ 		  if($("input[name=chk]:checked").length != $("input[name=chk]").length){
+ 			  $("input[name=all]").prop("checked",false);
+ 		  }
+ 	  });
    });
 </script>
 
@@ -55,7 +61,7 @@
          <th>DATE</th>
       </tr>
 <% 
-      if(list.size()==0){
+      if(list.size() == 0){
 %>
       <tr>
          <td colspan="5"><b>----글이 존재하지 않습니다----</b></td>

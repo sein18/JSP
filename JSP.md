@@ -106,7 +106,7 @@
 
   
 
-* __ Response 주요 메소드__
+*  __Response 주요 메소드__
 
   |       __메소드 명__        |                      __설명__                      |
   | :------------------------: | :------------------------------------------------: |
@@ -114,6 +114,24 @@
   | setStatus(int status_code) |  응답으로 전송될 상태 코드 설정, 성공은 200 / OK   |
   | sendError(int status_code) |   에러가 발생한 경우 응답 헤더에 상태 코드 설정    |
   |   setContentType(String)   | 서버에서 클라이언트로 전달될 값의 데이터 타입 설정 |
+
+---
+
+* __페이지를 넘어갈 때 여러 데이터를 넘겨줄 때 표기법__
+
+```js
+//forward : req, res가 유지되며 화면 전환.
+//redirect : 새로운 req, res, 새로운 페이지를 요청한것과 같은 방식으로 페이지 이동 (유지x)
+
+//
+request.setAttribute("dto",dto); //넘겨줄 dto객체를 선언
+pageContext.forward("boarddetail.jsp"); //념겨받을 페이지 선언
+
+//페이지 전환
+response.sendRedirect("mycontroller.jsp?comand=boardinsertform");
+ 
+
+```
 
 ---
 
