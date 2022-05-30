@@ -19,7 +19,7 @@
 		if(bool=="true"){
 			opener.document.getElementsByName("mypw")[0].focus();
 			opener.document.getElementsByName("myid")[0].title='Y'; 
-			//opener.document.getElementsByName("myid")[0].prop('readonly')=
+			opener.document.getElementsByName("myid")[0].setAttribute("readonly","readonly");
 		}else{
 			opener.document.getElementsByName("myid")[0].focus();
 		}

@@ -10,6 +10,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+	function opendto() {
+		 if(document.getElementsByTagName("table")[0].style.display=="inline-block"){
+			 document.getElementsByTagName("table")[0].style.display="none";
+		 }else{
+			 document.getElementsByTagName("table")[0].style.display="inline-block";
+		 }
+	}
+</script>
 </head>
 <body>
  <%
@@ -23,8 +32,50 @@
 <h1>메인화면</h1> 
 <div>
 	<div>
-		<a href="logincontroller.jsp?command=userinfo&myno=<%= dto.getMyno()%>">내정보보기</a>
+		<button onclick="opendto();">내정보보기</button>
+	</div>
+	<div>
+		<a href="mycontroller.jsp?command=boardlist" >게시판 목록</a>
 	</div>
 </div>
+<table border="1" style="text-align: center; display:none;">
+	<col width="30PX"><col width="200px">
+	<tr>
+		<th>NO</th>
+		<td><%= dto.getMyno() %></td>
+	</tr>
+	<tr>
+		<th>I D</th>
+		<td><%= dto.getMyid() %></td>
+	</tr>
+	<tr>
+		<th>P W</th>
+		<td><%= dto.getMypw() %></td>
+	</tr>
+	<tr>
+		<th>NAME</th>
+		<td><%= dto.getMyname() %></td>
+	</tr>
+	<tr>
+		<th>ADDR</th>
+		<td><%= dto.getMyaddr() %></td>
+	</tr>
+	<tr>
+		<th>PHONE</th>
+		<td><%= dto.getMyphone() %></td>
+	</tr>
+	<tr>
+		<th>EMAIL</th>
+		<td><%= dto.getMyemail() %></td>
+	</tr>
+	<tr>
+		<th>ENABLED</th>
+		<td><%= dto.getMyenabled() %></td>
+	</tr>
+	<tr>
+		<th>MYROLE</th>
+		<td><%= dto.getMyrole() %></td>
+	</tr>
+</table>
 </body>
 </html>
