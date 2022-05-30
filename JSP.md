@@ -117,7 +117,7 @@
 
 ---
 
-* __페이지를 넘어갈 때 여러 데이터를 넘겨줄 때 표기법__
+* __request를 이용한 페이지를 넘어갈 때 여러 데이터를 넘겨줄 때 표기법__
 
 ```js
 //forward : req, res가 유지되며 화면 전환.
@@ -131,6 +131,17 @@ pageContext.forward("boarddetail.jsp"); //념겨받을 페이지 선언
 response.sendRedirect("mycontroller.jsp?comand=boardinsertform");
  
 
+```
+
+---
+
+* __session를 이용한 페이지를 넘어갈 때 여러 데이터를 넘겨줄 때 표기법__
+
+```js
+session.setAttribute("dto", dto); //브라우저가 종료되거나 응답시간이 초과되면 리셋된다.
+			
+//session에 담긴 객체가 살아있는 시간
+session.setMaxInactiveInterval(60*60);
 ```
 
 ---
