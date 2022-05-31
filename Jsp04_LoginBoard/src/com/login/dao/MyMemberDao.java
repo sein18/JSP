@@ -159,5 +159,29 @@ public class MyMemberDao {
 		}
 		return res;
 	}
+	public int updatepw(String mypw, String myid) {
+		Connection con = getConnection();
+		PreparedStatement pstm = null;
+		int rs = 0;
+		
+		String sql = "UPDATE MYMEMBER SET MYPW=? WHERE MYID=? ";
+		try {
+			pstm = con.prepareStatement(sql);
+			pstm.setString(1, mypw);
+			pstm.setString(2, myid); 
+			rs = pstm.executeUpdate();
+			if(rs>0) {
+				commit(con);
+			}else {
+				rollback(con);
+			}
+		} catch (SQLException e) { 
+			e.printStackTrace();
+		}finally {
+			close(con,pstm);
+		}
+		
+		return rs;
+	}
 
 }

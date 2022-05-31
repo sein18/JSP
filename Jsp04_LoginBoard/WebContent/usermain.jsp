@@ -18,6 +18,13 @@
 			 document.getElementsByTagName("table")[0].style.display="inline-block";
 		 }
 	}
+	function change() {
+		let doc = document.getElementsByTagName("input")[0];
+		let id =  document.getElementsByTagName("td")[1].innerText;
+		let pw =  document.getElementsByTagName("td")[2].innerText;
+		console.log(id);
+		location.href="logincontroller.jsp?command=pwchk&tmp="+doc.value.trim()+"&id="+id.trim()+"&pw="+pw.trim(); 
+	}
 </script>
 </head>
 <body>
@@ -76,6 +83,13 @@
 		<th>MYROLE</th>
 		<td><%= dto.getMyrole() %></td>
 	</tr>
+	<tr>
+		 <th>
+		<button style="text-align:right;" onclick="change();">비번수정</button>
+		</th>
+		<td><input type="text" name="pw" placeholder="수정할 비번을 입력하시오."></td> 
+	</tr>
 </table>
+
 </body>
 </html>

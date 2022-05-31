@@ -109,8 +109,28 @@
 <%
 		}
 	}
-	
-	
+	else if(command.equals("pwchk")){
+		String tem = request.getParameter("tmp");
+		String myid = request.getParameter("id");
+		String mypw = request.getParameter("pw"); 
+		int res = dao.updatepw(tem, myid);
+		
+		if(res>0){
+%>
+		<script type="text/javascript">
+		alert("비밀번호 수정 성공"); 
+		</script>
+<%
+		response.sendRedirect("logincontroller.jsp?command=login&id="+myid+"&pw="+tem); 
+		}else{
+%>
+		<script type="text/javascript">
+		alert("비밀번호 수정 실패");
+		response.sendRedirect("logincontroller.jsp?command=login&id="+myid+"&pw="+mypw);
+		</script>
+<%
+		}
+	}
 %>
 </body>
 </html>
