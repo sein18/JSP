@@ -15,8 +15,8 @@
 </script>
 </head>
 <body>
-	<div style="width: 300px";>
-		<h1 style="text-align: center;">LOGIN</h1>
+	<div style="width: 300px; background-color: rgb(200,200,260)";>
+		<h1 style="text-align: center; background-color: skyblue;">LOGIN</h1>
 		<form action="logincontroller.jsp" method="post">
 			<input type="hidden" name="command" value="login">
 			<table border="1">

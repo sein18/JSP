@@ -10,6 +10,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+table{
+	display: inline-block;
+}
+</style>
 <script type="text/javascript">
 	function opendto() {
 		 if(document.getElementsByTagName("table")[0].style.display=="inline-block"){
@@ -36,9 +41,9 @@
  	<a href="logincontroller.jsp?command=logout">로그아웃</a>
 </div>
 
+<div style="width: 150px ;text-align: center; border: solid;">
 <h1>메인화면</h1> 
-<div>
-	<div>
+	<div style="border-top: solid;">
 		<button onclick="opendto();">내정보보기</button>
 	</div>
 	<div>
@@ -90,6 +95,19 @@
 		<td><input type="text" name="pw" placeholder="수정할 비번을 입력하시오."></td> 
 	</tr>
 </table>
-
+<table border="1">
+	<tr>
+	<th>d</th>
+	<td>d</td>
+	</tr>
+	<tr>
+	<th>d</th>
+	<td>d</td>
+	</tr>
+	<tr>
+	<th>d</th>
+	<td>d</td>
+	</tr>
+</table>
 </body>
 </html>
