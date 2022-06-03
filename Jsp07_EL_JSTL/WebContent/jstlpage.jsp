@@ -36,7 +36,23 @@
 		
 		<c:forEach items="${list}" var="score">
 			<tr>
-				<td>${score.name}</td>
+				<td>
+					<c:if test="${score.name eq '이름1' }">
+						<c:out value="홍길동"></c:out>
+					</c:if>
+					<c:choose>
+						<c:when test="${score.name eq '이름2'}">
+							<c:out value="${score.name }님!"></c:out>
+						</c:when>
+						<c:when test="${score.name eq '이름3' }">
+							<c:out value="${score.name }님@@"></c:out>
+						</c:when>
+						<c:otherwise>
+							<c:out value="누구임?"></c:out>
+						</c:otherwise>
+					</c:choose>
+					
+				</td>
 				<td>${score.kor}</td>
 				<td>${score.eng}</td>
 				<td>${score.math}</td>
@@ -45,8 +61,20 @@
 				<td>${score.grade}</td> 				 
 			</tr>
 		</c:forEach>
-
+		
 	</table>
+	
+	<c:forEach var="i" begin="1" end="10" step="2">
+		${i }<br>
+	</c:forEach>
+	
+	<c:set var="test" value="jstl test" scope="session"></c:set>
+	${test }
+	<c:out value="${test }"></c:out>
+	
+	
+	
+	
 	
 	
 	

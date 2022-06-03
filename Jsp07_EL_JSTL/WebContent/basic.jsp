@@ -43,5 +43,6 @@
 			</tr>
 		</tbody>
 	</table>
+	${test}
 </body>
 </html>
