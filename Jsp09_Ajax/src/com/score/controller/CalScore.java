@@ -36,9 +36,9 @@ public class CalScore extends HttpServlet {
 		// {"name":value, "sum":value, "avg":value}
 
 		PrintWriter out = response.getWriter();
-		 out.println(obj.toJSONString());
-		 
-		 System.out.println(obj.toJSONString());
+		out.println(obj.toJSONString());
+
+		System.out.println(obj.toJSONString());
 	}
 
 	 

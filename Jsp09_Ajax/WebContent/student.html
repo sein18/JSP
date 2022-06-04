@@ -15,8 +15,8 @@
 		return "?"+name+"&"+eng+"&"+kor+"&"+math;
 	}
 	
-	$(function () {
-		$("#process").click(function () {
+	$(function (){ 
+		$("#process").click(function (){
 			$.ajax({
 				url:"CalScore"+getParam(),
 				dataType:"json",

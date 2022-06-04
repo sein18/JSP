@@ -64,3 +64,26 @@ __서블릿 메소드__
 * __doPost__
   * client에서 데이터 전송 방식을 post방식으로 전송하면 호출되는 메소드 	
     *  반드시 ServletException 처리 해야 함
+
+---
+
+# ajax
+
+* `Ajax`는 Asynchronous JavaScript and XML의 약자로, 말 그대로 JavaScript와 XML을 이용한 비동기적 정보 __교환 기법__이다.
+  * 웹페이지내에서 새로고침을 하지않고 로그인 부분만 바꿔줄때 주로 사용 한다.
+
+```javascript
+<script type="text/javascript">
+    $.ajax({
+    url: "//url",
+    method: "GET",
+    dataType: "JSON",
+    success: function(data) {
+        $("#content").html(data);
+    },error: function(){
+        alert("실패");
+    }
+})
+</script>
+```
+
