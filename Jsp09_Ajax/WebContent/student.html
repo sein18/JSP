@@ -17,7 +17,12 @@
 	
 	$(function (){ 
 		$("#process").click(function (){
-			$.ajax({
+			let kor = Number(document.getElementById("kor").value);
+			let eng = Number(document.getElementById("eng").value);
+			let math = Number(document.getElementById("math").value);
+			if((kor >=0 & kor<=100) & (eng >=0 & eng<=100) & (math >=0 & math<=100))
+			{
+				$.ajax({
 				url:"CalScore"+getParam(),
 				dataType:"json",
 				success:function(msg){
@@ -28,17 +33,22 @@
 				error:function(){
 					alert("실패ㅜㅜ");
 				}
-			});
+				});
+			}
+			else
+				{alert("숫자를 알맞게 입력하시오.(0~100)");
+				
+			} 
 		});
 	});
 </script>
 <body>
 <h1>성적 처리</h1>
 
-이름:<input type="text" id="name"><br>
-국어:<input type="text" id="kor"><br>
-영어:<input type="text" id="eng"><br>
-수학:<input type="text" id="math"><br>
+이름:<input type="text" id="name" placeholder="이름을 입력하세요"><br>
+국어:<input type="text" id="kor"  placeholder="숫자를 입력하세요"><br>
+영어:<input type="text" id="eng" placeholder="숫자를 입력하세요"><br>
+수학:<input type="text" id="math" placeholder="숫자를 입력하세요"><br>
 <br>
 <input type="button" id="process" value="성적처리">
 <br><br>
