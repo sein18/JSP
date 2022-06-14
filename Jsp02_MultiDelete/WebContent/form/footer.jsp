@@ -6,14 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-	
-	header{
-		background-color: skyblue;
-		height: 50px;
-	}
-	a{
-		text-decoration: none;
-	}
+	 
 	footer{
 		background-color: skyblue;
 		height: 50px;

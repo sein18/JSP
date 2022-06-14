@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.ASPECTJRT_LIB=C\:/Users/tpdls/OneDrive/\uBC14\uD0D5 \uD654\uBA74/eclipse/plugins/org.aspectj.runtime_1.9.6.202012111622.jar
 org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/Users/tpdls/OneDrive/\uBC14\uD0D5 \uD654\uBA74/eclipse/
 org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Program Files/Amazon Corretto/jdk11.0.14_10/lib/jrt-fs.jar
 org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Program Files/Amazon Corretto/jdk11.0.14_10/lib/src.zip

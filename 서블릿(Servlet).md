@@ -20,11 +20,11 @@
 
 * 설정 정보
   *  Servlet 정의, Servlet 초기화 파라미터
-  * Session 설정 파라미터
-  * Servlet/JSP 매핑, MIME type 매핑
-  * 보안 설정
-  * Welcome file list 설정
-  * 에러 페이지 리스트, 리소스, 환경 변수
+  *  Session 설정 파라미터
+  *  Servlet/JSP 매핑, MIME type 매핑
+  *  보안 설정
+  *  Welcome file list 설정
+  *  에러 페이지 리스트, 리소스, 환경 변수
 
 * 파일 세부내용
   * < web-app > : 루트 속성, 문법 식별자 및 버전 정보를 속성 값으로 설정
@@ -67,10 +67,31 @@ __서블릿 메소드__
 
 ---
 
+# JSTL(JSP Standard Tag Library)
+
+**JSP 페이지 내에서 [자바](https://ko.wikipedia.org/wiki/자바_(프로그래밍_언어)) 코드를 바로 사용하지 않고 로직을 내장하는 효율적인 방법을 제공하는 라이브러리**
+
+* Core (c) : 변수, 반복문, 조건, 페이지 이동
+* Formatting (fmt) : 숫자, 날짜, 시간을 포메팅
+* DataBase (sql)
+* Xml (x)
+* Function (fn)
+
+```jsp
+JSTL을 사용하기 위한 설정
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+```
+
+
+
+---
+
 # ajax
 
-* `Ajax`는 Asynchronous JavaScript and XML의 약자로, 말 그대로 JavaScript와 XML을 이용한 비동기적 정보 __교환 기법__이다.
-  * 웹페이지내에서 새로고침을 하지않고 로그인 부분만 바꿔줄때 주로 사용 한다.
+- `Ajax`는 Asynchronous JavaScript and XML의 약자로, 말 그대로 JavaScript와 XML을 이용한 비동기적 정보 __교환 기법__이다.
+  - 웹페이지내에서 새로고침을 하지않고 로그인 부분만 바꿔줄때 주로 사용 한다.
 
 ```javascript
 <script type="text/javascript">
@@ -86,4 +107,3 @@ __서블릿 메소드__
 })
 </script>
 ```
-
